@@ -1,6 +1,6 @@
 const apiUrl = "https://api.adviceslip.com/advice";
 
-const btn = document.querySelector(".button");
+const btn = document.querySelector(".btn");
 const advice = document.querySelector("#advice");
 const number = document.querySelector("#number");
 

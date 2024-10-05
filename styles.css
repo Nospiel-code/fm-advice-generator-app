@@ -124,7 +124,7 @@ img {
   padding-bottom: 2.5rem;
 }
 
-.button {
+.btn {
   border: none;
   background: url("./images/icon-dice.svg") var(--clr-primary-green) no-repeat
     center;
