@@ -1,0 +1,175 @@
+/***************** RESET ***************/
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --clr-primary-cyan: hsl(193, 38%, 86%);
+  --clr-primary-green: hsl(150, 100%, 66%);
+  --clr-neutral-900: hsl(218, 23%, 16%);
+  --clr-neutral-700: hsl(217, 19%, 24%);
+  --clr-neutral-500: hsl(217, 19%, 38%);
+
+  --ff-base: "Monrope", sans-serif;
+
+  --fw-regular: 600;
+
+  --fs-quote: 28px;
+}
+
+body {
+  background-color: var(--clr-neutral-900);
+  font-family: var(--ff-base);
+  display: grid;
+  place-content: center;
+  position: relative;
+  height: 100dvh;
+}
+
+main {
+  background-color: var(--clr-neutral-700);
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+  margin: 1rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: var(--clr-primary-green);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: var(--fs-quote);
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-cyan);
+}
+
+img {
+  padding-bottom: 2.5rem;
+}
+
+.button {
+  border: none;
+  background: url("./images/icon-dice.svg") var(--clr-primary-green) no-repeat
+    center;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: var(--clr-primary-green) 0 0 30px 2px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+.attribution {
+  margin-top: auto;
+  color: var(--clr-primary-cyan);
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+
+  bottom: 0;
+}
+
+a:link {
+  color: var(--clr-primary-green);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--clr-primary-green);
+}
